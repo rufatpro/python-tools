@@ -4,8 +4,9 @@ import os
 import extruct as extruct
 import requests
 from bs4 import BeautifulSoup
-from libsnrr2.file.csv_tools import load_not_empty_lines
-from libsnrr2.file.excel import print_2_excel_file
+
+from libs.file.csv_tools import load_not_empty_lines
+from libs.file.excel import print_2_excel_file
 
 
 def get_request_headers():
