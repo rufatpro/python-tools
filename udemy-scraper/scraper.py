@@ -15,10 +15,8 @@ def get_request_headers():
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
         "Connection": "keep-alive",
-        # "Upgrade-Insecure-Requests": "1",
         "Pragma": "no-cache",
         "Cache-Control": "no-cache",
-        "x-api-key": "18f057d42feadf59b4943b7fb4c064fcd626778f",  # noqa
     }
 
 
