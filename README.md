@@ -1,6 +1,10 @@
 # python-tools
 Collected useful projects made in Python
 
+## Installation
+
+    pip install -r requirements.txt
+
 ## Udemy Scraper
 Scraper is designed to rank courses on the Udemy website.
 
