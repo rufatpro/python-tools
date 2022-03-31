@@ -38,7 +38,6 @@ class URLInfo:
     @classmethod
     def get_num_students(cls, text):
         bs = BeautifulSoup(text, "lxml")
-        # num = [el.text for el in bs.find_all() if "data-purpose" in el.attrs and el["data-purpose"] == "enrollment"]
         res: str = bs.select_one('div[data-purpose="enrollment"]').text
         res = res.replace("\xa0", "")
         res_int = 0
@@ -55,9 +54,6 @@ class URLInfo:
         self.metadata["authors"] = ";".join([row["name"] for row in json_ld["creator"]])
         self.metadata["description"] = json_ld["description"]
         self.metadata["audienceType"] = "\n".join([at for at in json_ld["audience"]["audienceType"]])
-        # print(self.url)
-        # print([at for at in json_ld["audience"]["audienceType"]])
-        # print(self.metadata["audienceType"])
         self.metadata["inLanguage"] = json_ld["inLanguage"]
         self.metadata["rating"] = json_ld["aggregateRating"]
         self.metadata["num_students"] = self.get_num_students(text)
